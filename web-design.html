@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Services - Era AXE</title>
+    <meta name="description" content="Professional web design services by Era AXE. Custom websites, responsive design, and modern UI/UX solutions.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional styles specific to web design page */
+        .web-design-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .web-design-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content-web {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-text-web h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-text-web p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: white;
+        }
+
+        .web-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .web-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .web-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .web-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .web-card h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .web-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .services-web {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .services-grid-web {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card-web {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-web::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .service-card-web:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-icon-web {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon-web i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .service-card-web h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card-web p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .portfolio-showcase {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .portfolio-grid-web {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item-web {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .portfolio-item-web:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .portfolio-image-web {
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .portfolio-content-web {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content-web h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .portfolio-content-web p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .cta-section-web {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content-web {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-content-web h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content-web p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content-web {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text-web h1 {
+                font-size: 2.5rem;
+            }
+
+            .web-visual {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .services-grid-web,
+            .portfolio-grid-web {
+                grid-template-columns: 1fr;
+            }
+
+            .back-button {
+                position: static;
+                margin: 20px;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html#services" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Services
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Era<span>AXE</span></h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Web Design Hero Section -->
+    <section class="web-design-hero">
+        <div class="hero-content-web">
+            <div class="hero-text-web" data-aos="fade-right">
+                <h1>Professional Web Design Services</h1>
+                <p>Transform your digital presence with stunning, responsive websites that drive results. We create modern, user-friendly websites that convert visitors into customers.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                    <a href="#portfolio-web" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+            <div class="web-visual" data-aos="fade-left">
+                <div class="web-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Perfect on all devices</p>
+                </div>
+                <div class="web-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Modern UI/UX</h3>
+                    <p>Stunning interfaces</p>
+                </div>
+                <div class="web-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Fast Loading</h3>
+                    <p>Optimized performance</p>
+                </div>
+                <div class="web-card">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Ready</h3>
+                    <p>Search engine friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-web">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Web Design Services</h2>
+                <p>Comprehensive web design solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid-web">
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-web">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Responsive Website Design</h3>
+                    <p>Beautiful websites that work perfectly on desktop, tablet, and mobile devices. We ensure your site looks great and functions flawlessly everywhere.</p>
+                    <ul class="service-features">
+                        <li>Mobile-first design approach</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>Fast loading times</li>
+                        <li>Intuitive navigation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-web">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Powerful online stores that drive sales. We build secure, scalable e-commerce platforms with seamless checkout experiences.</p>
+                    <ul class="service-features">
+                        <li>Secure payment gateways</li>
+                        <li>Inventory management</li>
+                        <li>Order tracking system</li>
+                        <li>Customer accounts</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-web">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Content Management Systems</h3>
+                    <p>Easy-to-update websites with powerful CMS integration. Take control of your content with user-friendly admin panels.</p>
+                    <ul class="service-features">
+                        <li>WordPress integration</li>
+                        <li>Custom admin panels</li>
+                        <li>Drag-and-drop editing</li>
+                        <li>Multi-user access</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon-web">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Landing Page Design</h3>
+                    <p>High-converting landing pages optimized for marketing campaigns. Perfect for PPC, social media, and email marketing.</p>
+                    <ul class="service-features">
+                        <li>Conversion optimization</li>
+                        <li>A/B testing ready</li>
+                        <li>Lead capture forms</li>
+                        <li>Analytics integration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon-web">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Website Redesign</h3>
+                    <p>Transform your outdated website into a modern, high-performing digital asset. We refresh your online presence while maintaining your brand identity.</p>
+                    <ul class="service-features">
+                        <li>Brand consistency</li>
+                        <li>SEO preservation</li>
+                        <li>Performance improvement</li>
+                        <li>Content migration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="service-card-web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon-web">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Website Maintenance</h3>
+                    <p>Keep your website running smoothly with our comprehensive maintenance services. Regular updates, security patches, and performance monitoring.</p>
+                    <ul class="service-features">
+                        <li>Regular updates</li>
+                        <li>Security monitoring</li>
+                        <li>Performance optimization</li>
+                        <li>24/7 support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section class="portfolio-showcase" id="portfolio-web">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Web Design Portfolio</h2>
+                <p>See how we've helped businesses transform their digital presence</p>
+            </div>
+            <div class="portfolio-grid-web">
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern online store with seamless checkout experience and inventory management system.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">WooCommerce</span>
+                            <span class="portfolio-tag">Responsive</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>Business Analytics Dashboard</h3>
+                        <p>Intuitive dashboard for data visualization with real-time analytics and reporting.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">React</span>
+                            <span class="portfolio-tag">Dashboard</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>Hotel Booking System</h3>
+                        <p>Complete booking platform with reservation management and payment integration.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Booking System</span>
+                            <span class="portfolio-tag">PHP</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>Online Learning Platform</h3>
+                        <p>Educational website with course management, student tracking, and certification.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">LMS</span>
+                            <span class="portfolio-tag">WordPress</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>Healthcare Portal</h3>
+                        <p>Patient management system with appointment scheduling and medical records.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Healthcare</span>
+                            <span class="portfolio-tag">Secure</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image-web">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="portfolio-content-web">
+                        <h3>Car Rental Platform</h3>
+                        <p>Vehicle booking system with location management and payment processing.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Rental</span>
+                            <span class="portfolio-tag">Booking</span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-web">
+        <div class="cta-content-web" data-aos="fade-up">
+            <h2>Ready to Transform Your Online Presence?</h2>
+            <p>Let's create a stunning website that drives results for your business. Get a free consultation and quote today!</p>
+            <a href="index.html#contact" class="btn-cta">Get Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h2>Era<span>AXE</span></h2>
+                        <p>Transforming businesses through innovative digital solutions.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="web-design.html">Web Development</a></li>
+                        <li><a href="#">Brand Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/gauharaxe?igsh=MThmcWNjcDZpc2Zvcw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Era AXE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+        });
+
+        // Navigation functionality (same as main site)
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            
+            // Animate hamburger menu
+            const bars = navToggle.querySelectorAll('.bar');
+            bars[0].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(-5px, 6px)' : 'none';
+            bars[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
+            bars[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : 'none';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        console.log('Era AXE Web Design Services page loaded successfully!');
+    </script>
+    
+    <!-- WhatsApp Contact Button -->
+    <a href="https://wa.me/923157338694" target="_blank" class="whatsapp-button" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+</body>
+</html>
